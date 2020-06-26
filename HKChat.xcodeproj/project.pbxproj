@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4EACC76524A5E54900E70B65 /* HKChat.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EACC76324A5E54900E70B65 /* HKChat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4EACC77024A5E62000E70B65 /* Messaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EACC76F24A5E62000E70B65 /* Messaging.swift */; };
+		521503608BDF74590296B675 /* Pods_HKChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C356155926D51A9AB5322D77 /* Pods_HKChat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +17,9 @@
 		4EACC76324A5E54900E70B65 /* HKChat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HKChat.h; sourceTree = "<group>"; };
 		4EACC76424A5E54900E70B65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EACC76F24A5E62000E70B65 /* Messaging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messaging.swift; sourceTree = "<group>"; };
+		C356155926D51A9AB5322D77 /* Pods_HKChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HKChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFA145DCB7367AF1BC45E95D /* Pods-HKChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HKChat.release.xcconfig"; path = "Target Support Files/Pods-HKChat/Pods-HKChat.release.xcconfig"; sourceTree = "<group>"; };
+		F7A80EB31918BFEDA907F143 /* Pods-HKChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HKChat.debug.xcconfig"; path = "Target Support Files/Pods-HKChat/Pods-HKChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -23,17 +27,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				521503608BDF74590296B675 /* Pods_HKChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13A3A6CF0AEF12B9F39A8E6F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C356155926D51A9AB5322D77 /* Pods_HKChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4EACC75624A5E54900E70B65 = {
 			isa = PBXGroup;
 			children = (
 				4EACC76224A5E54900E70B65 /* HKChat */,
 				4EACC76124A5E54900E70B65 /* Products */,
+				AE26B87523B4D82B0C52DD01 /* Pods */,
+				13A3A6CF0AEF12B9F39A8E6F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +78,16 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		AE26B87523B4D82B0C52DD01 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7A80EB31918BFEDA907F143 /* Pods-HKChat.debug.xcconfig */,
+				DFA145DCB7367AF1BC45E95D /* Pods-HKChat.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -81,6 +106,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EACC76824A5E54900E70B65 /* Build configuration list for PBXNativeTarget "HKChat" */;
 			buildPhases = (
+				64A90ECA1FC7AD9795D2F01F /* [CP] Check Pods Manifest.lock */,
 				4EACC75B24A5E54900E70B65 /* Headers */,
 				4EACC75C24A5E54900E70B65 /* Sources */,
 				4EACC75D24A5E54900E70B65 /* Frameworks */,
@@ -137,6 +163,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		64A90ECA1FC7AD9795D2F01F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HKChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4EACC75C24A5E54900E70B65 /* Sources */ = {
@@ -272,6 +323,7 @@
 		};
 		4EACC76924A5E54900E70B65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7A80EB31918BFEDA907F143 /* Pods-HKChat.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +351,7 @@
 		};
 		4EACC76A24A5E54900E70B65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFA145DCB7367AF1BC45E95D /* Pods-HKChat.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;

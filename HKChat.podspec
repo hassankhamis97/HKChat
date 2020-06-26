@@ -13,4 +13,9 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/hassankhamis97/HKChat.git", :tag => "1.0.0" }
   spec.source_files = "HKChat/Source/*.{swift}"
   spec.swift_version = "5.0"
+
+  spec.static_framework = true
+  spec.dependency 'Firebase'
+  spec.dependency 'Firebase/Storage'
+  spec.dependency 'Firebase/Firestore'
 end
