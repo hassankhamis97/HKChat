@@ -1,0 +1,6 @@
+framework module HKChat {
+  umbrella header "HKChat.h"
+
+  export *
+  module * { export * }
+}
