@@ -16,6 +16,7 @@ Pod::Spec.new do |spec|
 
   spec.static_framework = true
   spec.dependency 'Firebase'
+  spec.dependency 'Firebase/Auth'
   spec.dependency 'Firebase/Storage'
   spec.dependency 'Firebase/Firestore'
   spec.dependency 'MessageKit'
