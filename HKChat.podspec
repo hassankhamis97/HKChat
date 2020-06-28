@@ -18,4 +18,5 @@ Pod::Spec.new do |spec|
   spec.dependency 'Firebase'
   spec.dependency 'Firebase/Storage'
   spec.dependency 'Firebase/Firestore'
+  spec.dependency 'MessageKit'
 end

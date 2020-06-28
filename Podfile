@@ -11,4 +11,5 @@ target 'HKChat' do
   pod 'Firebase'
   pod 'Firebase/Storage'
   pod 'Firebase/Firestore'
+  pod 'MessageKit'
 end
