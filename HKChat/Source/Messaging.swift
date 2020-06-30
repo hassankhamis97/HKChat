@@ -7,10 +7,14 @@
 //
 
 import Foundation
+import FirebaseAuth
+import FirebaseFirestore
+import MessageKit
 public class Messaging {
+    let db : Firestore?
     static var instance : Messaging? = nil
     private init(){
-        
+        db = Firestore.firestore()
     }
     public static func getInstance() -> Messaging{
         if Messaging.instance == nil {
@@ -18,7 +22,24 @@ public class Messaging {
         }
         return Messaging.instance!
     }
-    public func name() {
-        print("YESSSSS")
+    
+    
+    public func sendTextMessage(isNewConversation : Bool) {
+        if isNewConversation {
+            let conversation = Conversation.getInstance()
+            conversation.startNewConversation()
+        }
+//        db?.collection("HK_Messages").document(Auth.auth().currentUser!.uid).setData(userChatDataDic, completion: { err in
+//            if let err = err {
+//                print("Error writing document: \(err)")
+//                completions(err)
+//            } else {
+//                completions(nil)
+//                print("Document successfully written!")
+//            }
+//        })
     }
+    
+    
 }
+

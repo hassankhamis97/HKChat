@@ -7,12 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E61B7E824AAFC1F003EB4DE /* UserChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E61B7E724AAFC1F003EB4DE /* UserChat.swift */; };
+		4E61B7EB24AAFCD4003EB4DE /* HKUserChatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E61B7EA24AAFCD4003EB4DE /* HKUserChatData.swift */; };
+		4E61B7ED24AAFE6A003EB4DE /* HKConversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E61B7EC24AAFE6A003EB4DE /* HKConversation.swift */; };
+		4E61B7EF24AAFE97003EB4DE /* DictionaryEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E61B7EE24AAFE97003EB4DE /* DictionaryEncoder.swift */; };
+		4E61B7F124AAFEC5003EB4DE /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E61B7F024AAFEC5003EB4DE /* Conversation.swift */; };
 		4EACC76524A5E54900E70B65 /* HKChat.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EACC76324A5E54900E70B65 /* HKChat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4EACC77024A5E62000E70B65 /* Messaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EACC76F24A5E62000E70B65 /* Messaging.swift */; };
 		521503608BDF74590296B675 /* Pods_HKChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C356155926D51A9AB5322D77 /* Pods_HKChat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E61B7E724AAFC1F003EB4DE /* UserChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserChat.swift; sourceTree = "<group>"; };
+		4E61B7EA24AAFCD4003EB4DE /* HKUserChatData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKUserChatData.swift; sourceTree = "<group>"; };
+		4E61B7EC24AAFE6A003EB4DE /* HKConversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKConversation.swift; sourceTree = "<group>"; };
+		4E61B7EE24AAFE97003EB4DE /* DictionaryEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryEncoder.swift; sourceTree = "<group>"; };
+		4E61B7F024AAFEC5003EB4DE /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		4EACC76024A5E54900E70B65 /* HKChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HKChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EACC76324A5E54900E70B65 /* HKChat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HKChat.h; sourceTree = "<group>"; };
 		4EACC76424A5E54900E70B65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,6 +52,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4E61B7E924AAFCAA003EB4DE /* POJOs */ = {
+			isa = PBXGroup;
+			children = (
+				4E61B7EA24AAFCD4003EB4DE /* HKUserChatData.swift */,
+				4E61B7EC24AAFE6A003EB4DE /* HKConversation.swift */,
+				4E61B7EE24AAFE97003EB4DE /* DictionaryEncoder.swift */,
+			);
+			path = POJOs;
+			sourceTree = "<group>";
+		};
 		4EACC75624A5E54900E70B65 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +83,7 @@
 		4EACC76224A5E54900E70B65 /* HKChat */ = {
 			isa = PBXGroup;
 			children = (
+				4E61B7E924AAFCAA003EB4DE /* POJOs */,
 				4EACC76E24A5E61700E70B65 /* Source */,
 				4EACC76324A5E54900E70B65 /* HKChat.h */,
 				4EACC76424A5E54900E70B65 /* Info.plist */,
@@ -74,6 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				4EACC76F24A5E62000E70B65 /* Messaging.swift */,
+				4E61B7E724AAFC1F003EB4DE /* UserChat.swift */,
+				4E61B7F024AAFEC5003EB4DE /* Conversation.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -84,7 +107,6 @@
 				F7A80EB31918BFEDA907F143 /* Pods-HKChat.debug.xcconfig */,
 				DFA145DCB7367AF1BC45E95D /* Pods-HKChat.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -194,6 +216,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E61B7F124AAFEC5003EB4DE /* Conversation.swift in Sources */,
+				4E61B7EF24AAFE97003EB4DE /* DictionaryEncoder.swift in Sources */,
+				4E61B7EB24AAFCD4003EB4DE /* HKUserChatData.swift in Sources */,
+				4E61B7ED24AAFE6A003EB4DE /* HKConversation.swift in Sources */,
+				4E61B7E824AAFC1F003EB4DE /* UserChat.swift in Sources */,
 				4EACC77024A5E62000E70B65 /* Messaging.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

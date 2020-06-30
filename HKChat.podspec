@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
   spec.author       = { "Hassan Khamis" => "hassankhamis97@hotmail.com" }
   spec.platform     = :ios, "12.0"
   spec.source       = { :git => "https://github.com/hassankhamis97/HKChat.git", :tag => "1.0.0" }
-  spec.source_files = "HKChat/Source/*.{swift}"
+  spec.source_files = ["HKChat/Source/*.{swift}","HKChat/POJOs/*.{swift}"]
   spec.swift_version = "5.0"
 
   spec.static_framework = true
