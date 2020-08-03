@@ -8,8 +8,11 @@
 
 import Foundation
 public protocol HKUserChatDataType : Codable {
+    var email: String { get }
     
-    var chatId: Int { get }
+    var userChatId: Int { get }
+    
+    var userId: String { get }
     
     var name: String { get }
     
@@ -17,13 +20,27 @@ public protocol HKUserChatDataType : Codable {
     
     var currentViewedPerson: String { get }
 }
-struct HKUserChatData : HKUserChatDataType {
-    var chatId: Int
+public struct HKUserChatData : HKUserChatDataType {
+    public var userId: String
     
-    var name: String
+    public var email: String
     
-    var photoUrl: String
+    public var userChatId: Int
     
-    var currentViewedPerson: String
+    public var name: String
+    
+    public var photoUrl: String
+    
+    public var currentViewedPerson: String
+    
+    public init(userId: String,email: String,userChatId: Int,name: String,photoUrl: String,currentViewedPerson: String){
+        self.userId = userId
+        self.email = email
+        self.userChatId = userChatId
+        self.name = name
+        self.photoUrl = photoUrl
+        self.currentViewedPerson = currentViewedPerson
+    }
     
 }
+
